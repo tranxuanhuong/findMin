@@ -1,14 +1,13 @@
 <?php
-
-function findMin(){
-    $arr=[1,2,3,4,5,6,7,8,9,10,11,12];
-    $min=$arr[0];
-   for ($i=0;$i<count($arr);$i++){
-    if ($min<$arr[i]){
-        $min=$arr[i];
+function findMin($arr)
+{
+    $min = $arr[0];
+    for ($index = 0; $index < count($arr); $index++) {
+        if ($min > $arr[$index]) {
+            $min = $arr[$index];
+        }
     }
-
-   }
-   echo $min;
+    echo "Giá trị nhỏ nhất trong mảng: ". $min;
 }
-findMin();
+$arr = [2, 4, 5, 7, 5, 3];
+findMin($arr);
